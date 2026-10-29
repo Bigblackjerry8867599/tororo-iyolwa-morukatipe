@@ -22,7 +22,7 @@
             --hero-green-deep: #2f5228;
             --hero-green-light: #5c8f46;
 
-            --brand-forest: #00401A;
+            --brand-forest: #345C32;   /* was #00401A — now a lighter forest green */
 
             --font-display: 'Marcellus', 'Playfair Display', Georgia, serif;
             --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
@@ -58,7 +58,7 @@
 
         ::selection {
             background: var(--accent);
-            color: #00401A;
+            color: #345C32;
         }
 
         :focus-visible {
@@ -196,7 +196,7 @@
             box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
         }
 
-        /* ===== HERO ===== */
+        /* ===== HERO — FLAT #345C32 ===== */
         .hero-body {
             background: var(--brand-forest);
             margin: 0;
@@ -208,10 +208,7 @@
             position: relative;
             padding-top: 0 !important;
             margin-top: 0 !important;
-            background:
-                radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.10), transparent 55%),
-                radial-gradient(circle at 12% 85%, rgba(0, 0, 0, 0.25), transparent 60%),
-                var(--brand-forest);
+            background: var(--brand-forest);   /* flat #345C32 — no gradients */
             overflow: hidden;
         }
 
@@ -309,11 +306,11 @@
 
         .hero-text {
             font-family: var(--font-display);
-            font-size: clamp(2.8rem, 6.5vw, 6rem);
+            font-size: clamp(1.4rem, 3.25vw, 3rem);
             font-weight: 400;
             letter-spacing: 0.02em;
             line-height: 1.05;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0.75rem;
             margin-top: 0;
             background: linear-gradient(135deg, #ffffff 0%, #e4efdb 55%, #a8c98f 100%);
             -webkit-background-clip: text;
@@ -352,13 +349,13 @@
 
         .hero-btns .btn-primary {
             background-color: var(--accent);
-            color: #00401A;
+            color: #345C32;
             font-weight: 700;
             letter-spacing: 0.04em;
         }
         .hero-btns .btn-primary:hover {
             background-color: #ffe08a;
-            color: #00401A;
+            color: #345C32;
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(255, 209, 102, 0.35);
         }
@@ -371,14 +368,14 @@
         }
         .hero-btns .btn-secondary:hover {
             background-color: #ffffff;
-            color: #00401A;
+            color: #345C32;
             border-color: #ffffff;
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(255, 255, 255, 0.15);
         }
 
         @media (max-width: 992px) {
-            .hero-text { font-size: 4.5rem; }
+            .hero-text { font-size: 2.25rem; }
             .hero-lady { max-width: 500px; margin-top: 300px; }
             .headline-right { font-size: 1.25rem; padding: 7px 22px 7px 26px; }
         }
@@ -390,7 +387,7 @@
             .container { flex-direction: column-reverse; }
 
             .hero-text {
-                font-size: 3.6rem;
+                font-size: 1.8rem;
                 margin-bottom: 0.5rem;
             }
 
@@ -439,7 +436,7 @@
         @media (max-width: 576px) {
             .hero-lady { max-width: 260px; }
             .headline-right { font-size: 0.95rem; padding: 5px 16px 5px 20px; letter-spacing: 0.08em; }
-            .hero-text { font-size: 2.8rem; }
+            .hero-text { font-size: 1.4rem; }
 
             .hero-btns {
                 flex-direction: column;
@@ -1426,4 +1423,4 @@
         });
     </script>
 </body>
-                            </html>
+    </html>
