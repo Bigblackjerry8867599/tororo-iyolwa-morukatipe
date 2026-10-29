@@ -6,7 +6,7 @@
     <title>Mealcarta | Green Hero</title>
     <meta name="description" content="mealcarta offers curated hospitality experiences that connect passionate hosts with community-minded attendees.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Marcellus&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #3e362e;
@@ -24,7 +24,7 @@
 
             --brand-forest: #00401A;
 
-            --font-display: 'Dancing Script', 'Brush Script MT', cursive;
+            --font-display: 'Marcellus', 'Playfair Display', Georgia, serif;
             --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 
             --card-w: 260px;
@@ -50,8 +50,8 @@
 
         h1, h2, h3, h4 {
             font-family: var(--font-display);
-            font-weight: 700;
-            letter-spacing: 0;
+            font-weight: 400;
+            letter-spacing: 0.01em;
         }
 
         h1, h2, h3 { text-wrap: balance; }
@@ -287,14 +287,14 @@
 
         .headline-right {
             font-family: var(--font-display);
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            text-transform: none;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
             color: var(--accent);
-            background-color: rgba(255, 209, 102, 0.14);
+            background-color: rgba(255, 209, 102, 0.12);
             border: 1px solid rgba(255, 209, 102, 0.45);
-            padding: 4px 32px 8px;
+            padding: 8px 26px 8px 30px;
             border-radius: 50px;
             display: inline-block;
             line-height: 1.15;
@@ -309,11 +309,11 @@
 
         .hero-text {
             font-family: var(--font-display);
-            font-size: clamp(4rem, 8vw, 7.5rem);
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1;
-            margin-bottom: 1rem;
+            font-size: clamp(2.8rem, 6.5vw, 6rem);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.05;
+            margin-bottom: 1.25rem;
             margin-top: 0;
             background: linear-gradient(135deg, #ffffff 0%, #e4efdb 55%, #a8c98f 100%);
             -webkit-background-clip: text;
@@ -378,9 +378,9 @@
         }
 
         @media (max-width: 992px) {
-            .hero-text { font-size: 5rem; }
+            .hero-text { font-size: 4.5rem; }
             .hero-lady { max-width: 500px; margin-top: 300px; }
-            .headline-right { font-size: 1.8rem; padding: 4px 26px 6px; }
+            .headline-right { font-size: 1.25rem; padding: 7px 22px 7px 26px; }
         }
 
         @media (max-width: 768px) {
@@ -390,7 +390,7 @@
             .container { flex-direction: column-reverse; }
 
             .hero-text {
-                font-size: 4rem;
+                font-size: 3.6rem;
                 margin-bottom: 0.5rem;
             }
 
@@ -421,8 +421,9 @@
             }
 
             .headline-right {
-                font-size: 1.6rem;
-                padding: 4px 22px 6px;
+                font-size: 1.1rem;
+                letter-spacing: 0.1em;
+                padding: 6px 20px 6px 24px;
                 align-self: center;
                 margin-right: 0;
                 margin-bottom: 0;
@@ -437,8 +438,8 @@
 
         @media (max-width: 576px) {
             .hero-lady { max-width: 260px; }
-            .headline-right { font-size: 1.4rem; padding: 3px 18px 5px; }
-            .hero-text { font-size: 3.2rem; }
+            .headline-right { font-size: 0.95rem; padding: 5px 16px 5px 20px; letter-spacing: 0.08em; }
+            .hero-text { font-size: 2.8rem; }
 
             .hero-btns {
                 flex-direction: column;
@@ -546,10 +547,10 @@
 
         .rot-card-body h3 {
             font-family: var(--font-display);
-            font-size: 1.9rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.05;
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.15;
             color: var(--accent);
         }
 
@@ -589,7 +590,7 @@
             .rotating-cards { padding: 0 0 45px; border-radius: 28px 28px 0 0; }
             .ring-stage { perspective: 1000px; }
             .rot-card-body { padding: 10px 12px 12px; }
-            .rot-card-body h3 { font-size: 1.5rem; }
+            .rot-card-body h3 { font-size: 1.15rem; }
             .rot-card-body p { font-size: 0.82rem; }
         }
 
@@ -707,10 +708,10 @@
 
         .section-title h2 {
             font-family: var(--font-display);
-            font-size: clamp(3.2rem, 6vw, 4.5rem);
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.05;
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.15;
             padding-bottom: 22px;
             color: var(--accent);
             display: inline-block;
@@ -796,10 +797,10 @@
             margin-bottom: 14px;
             color: var(--accent);
             font-family: var(--font-display);
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.05;
+            font-size: 1.65rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.15;
         }
 
         .service-content p {
@@ -853,11 +854,11 @@
         .step-card:hover { transform: translateY(-10px); border-color: var(--accent); }
 
         .step-number {
-            font-family: var(--font-body);
-            font-size: 4rem;
-            font-weight: 700;
+            font-family: var(--font-display);
+            font-size: 3.4rem;
+            font-weight: 400;
             line-height: 1;
-            letter-spacing: -0.02em;
+            letter-spacing: 0.02em;
             margin-bottom: 16px;
             background: linear-gradient(135deg, #ffd166 0%, #d9a441 100%);
             -webkit-background-clip: text;
@@ -869,10 +870,10 @@
         .step-card h3 {
             margin-bottom: 14px;
             font-family: var(--font-display);
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.05;
+            font-size: 1.65rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.15;
             color: #fff;
         }
 
@@ -915,10 +916,10 @@
             color: var(--accent);
             margin-bottom: 14px;
             font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.05;
+            font-size: 1.55rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.15;
         }
 
         .advantage-card p {
@@ -951,10 +952,10 @@
 
         .cta h2 {
             font-family: var(--font-display);
-            font-size: clamp(3.2rem, 6vw, 4.5rem);
-            font-weight: 700;
-            letter-spacing: 0;
-            line-height: 1.05;
+            font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.15;
             margin-bottom: 18px;
             position: relative;
         }
@@ -1004,11 +1005,12 @@
 
         .footer-logo {
             font-family: var(--font-display);
-            font-size: 2.4rem;
-            font-weight: 700;
+            font-size: 1.9rem;
+            font-weight: 400;
             color: white;
             margin-bottom: 20px;
             display: inline-block;
+            letter-spacing: 0.04em;
         }
 
         .footer-about p { margin-bottom: 20px; color: #ddd; }
@@ -1102,7 +1104,6 @@
     </style>
 </head>
 <body>
-    <!-- ===== NAV ===== -->
     <nav id="navbar">
         <div class="nav-container">
             <button onclick="toggleMenu()" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -1120,7 +1121,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-column">
@@ -1144,7 +1144,6 @@
         </div>
     </section>
 
-    <!-- Rotating cards -->
     <section class="rotating-cards" aria-label="Featured experiences">
         <div class="ring-stage">
             <div class="card-ring">
@@ -1207,7 +1206,6 @@
         </div>
     </section>
 
-    <!-- Clients -->
     <section class="clients">
         <div class="container">
             <div class="section-title">
@@ -1219,7 +1217,6 @@
         </div>
     </section>
 
-    <!-- What We Do -->
     <section class="what-we-do">
         <div class="container">
             <div class="section-title">
@@ -1251,7 +1248,6 @@
         </div>
     </section>
 
-    <!-- How It Works -->
     <section class="how-it-works">
         <div class="container">
             <div class="section-title">
@@ -1282,7 +1278,6 @@
         </div>
     </section>
 
-    <!-- Why Choose Us -->
     <section class="why-us">
         <div class="container">
             <div class="section-title">
@@ -1313,7 +1308,6 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Join Our Community?</h2>
@@ -1325,7 +1319,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div style="margin: 20px auto; max-width: 1200px; text-align: center;">
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 30px;">
@@ -1433,4 +1426,4 @@
         });
     </script>
 </body>
-                        </html>
+                            </html>
