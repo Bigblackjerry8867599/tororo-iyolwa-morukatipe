@@ -22,7 +22,8 @@
             --hero-green-deep: #2f5228;
             --hero-green-light: #5c8f46;
 
-            --brand-forest: #002200;   /* darkest green — perceptibly green, not black */
+            /* default: Deep Forest — change via the picker at the bottom */
+            --brand-forest: #0A3D1F;
 
             --font-display: 'Marcellus', 'Playfair Display', Georgia, serif;
             --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
@@ -58,7 +59,7 @@
 
         ::selection {
             background: var(--accent);
-            color: #002200;
+            color: var(--brand-forest);
         }
 
         :focus-visible {
@@ -80,6 +81,7 @@
             align-items: center;
             font-family: var(--font-body);
             overflow: visible;
+            transition: background-color 0.3s ease;
         }
 
         .container {
@@ -196,7 +198,7 @@
             box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
         }
 
-        /* ===== HERO — FLAT #002200 ===== */
+        /* ===== HERO ===== */
         .hero-body {
             background: var(--brand-forest);
             margin: 0;
@@ -208,8 +210,9 @@
             position: relative;
             padding-top: 0 !important;
             margin-top: 0 !important;
-            background: var(--brand-forest);   /* flat #002200 */
+            background: var(--brand-forest);
             overflow: hidden;
+            transition: background-color 0.3s ease;
         }
 
         .hero-container {
@@ -349,13 +352,13 @@
 
         .hero-btns .btn-primary {
             background-color: var(--accent);
-            color: #002200;
+            color: var(--brand-forest);
             font-weight: 700;
             letter-spacing: 0.04em;
         }
         .hero-btns .btn-primary:hover {
             background-color: #ffe08a;
-            color: #002200;
+            color: var(--brand-forest);
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(255, 209, 102, 0.35);
         }
@@ -368,7 +371,7 @@
         }
         .hero-btns .btn-secondary:hover {
             background-color: #ffffff;
-            color: #002200;
+            color: var(--brand-forest);
             border-color: #ffffff;
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(255, 255, 255, 0.15);
@@ -1079,6 +1082,86 @@
             color: #8f9b8a;
         }
 
+        /* ============================================================
+           LIVE COLOUR PICKER — preview the four dark greens in place
+           ============================================================ */
+        .color-picker {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 10, 10, 0.88);
+            padding: 10px 16px;
+            border-radius: 40px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 9999;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 209, 102, 0.35);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .color-picker .label {
+            color: var(--accent);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-right: 4px;
+            white-space: nowrap;
+        }
+
+        .swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.15s ease, border-color 0.2s ease;
+            position: relative;
+            padding: 0;
+            display: block;
+        }
+
+        .swatch:hover {
+            transform: scale(1.15);
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .swatch.active {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.28);
+        }
+
+        .swatch .tip {
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.92);
+            color: #fff;
+            padding: 4px 9px;
+            border-radius: 5px;
+            font-size: 10px;
+            font-family: monospace;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+            border: 1px solid rgba(255, 209, 102, 0.25);
+        }
+
+        .swatch:hover .tip { opacity: 1; }
+
+        @media (max-width: 576px) {
+            .color-picker { padding: 8px 10px; gap: 7px; bottom: 12px; }
+            .color-picker .label { display: none; }
+            .swatch { width: 26px; height: 26px; }
+        }
+
         /* Extra responsive */
         @media (max-width: 992px) {
             .hero-carousel {
@@ -1371,6 +1454,23 @@
         </div>
     </footer>
 
+    <!-- ===== LIVE COLOUR PICKER ===== -->
+    <div class="color-picker" role="group" aria-label="Preview dark green backgrounds">
+        <span class="label">Preview&nbsp;Green</span>
+        <button class="swatch active" data-color="#0A3D1F" style="background:#0A3D1F" aria-label="Deep Forest">
+            <span class="tip">1. Deep Forest · #0A3D1F</span>
+        </button>
+        <button class="swatch" data-color="#123C1E" style="background:#123C1E" aria-label="Dark Moss">
+            <span class="tip">2. Dark Moss · #123C1E</span>
+        </button>
+        <button class="swatch" data-color="#0E2F18" style="background:#0E2F18" aria-label="Pine">
+            <span class="tip">3. Pine · #0E2F18</span>
+        </button>
+        <button class="swatch" data-color="#1A4D2E" style="background:#1A4D2E" aria-label="Bottle Green">
+            <span class="tip">4. Bottle Green · #1A4D2E</span>
+        </button>
+    </div>
+
     <script>
         function toggleMenu() {
             const links = document.getElementById('nav-links');
@@ -1388,6 +1488,18 @@
         window.addEventListener('resize', handleResize);
         window.addEventListener('load', handleResize);
 
+        /* ---- Colour picker: swap --brand-forest on click ---- */
+        const swatches = document.querySelectorAll('.swatch');
+        swatches.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const color = btn.dataset.color;
+                document.documentElement.style.setProperty('--brand-forest', color);
+                swatches.forEach(s => s.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        /* Card scroll animations */
         document.addEventListener('DOMContentLoaded', function() {
             const observerOptions = { threshold: 0.1 };
 
@@ -1423,4 +1535,4 @@
         });
     </script>
 </body>
-    </html>
+                    </html>
